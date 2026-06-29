@@ -1,3 +1,6 @@
+# validaciones.py
+# Responsabilidad: Contiene todas las funciones de validación.
+
 def validar_dni(dni, lista_alumnos, dni_original=None):
     """
     Verifica que el DNI sea válido y no esté duplicado.
@@ -26,6 +29,7 @@ def validar_dni(dni, lista_alumnos, dni_original=None):
     
     return True, dni
 
+
 def validar_edad(edad):
     """
     Verifica que la edad sea un número entero no negativo.
@@ -47,6 +51,7 @@ def validar_edad(edad):
     
     return True, edad
 
+
 def validar_nota(nota):
     """
     Verifica que la nota sea un número entre 0 y 10.
@@ -67,3 +72,49 @@ def validar_nota(nota):
         return True, nota
     else:
         return False, "La nota debe estar entre 0 y 10."
+
+
+def validar_nombre(nombre):
+    """
+    Verifica que el nombre solo contenga letras y espacios.
+
+    Args:
+        nombre (str): Nombre a validar.
+
+    Returns:
+        tuple: (True, nombre) si es válido.
+               (False, mensaje_error) si no es válido.
+    """
+    # Recorremos cada caracter y verificamos que sea letra o espacio
+    for caracter in nombre:
+        if not (caracter.isalpha() or caracter == " "):
+            return False, "El nombre solo puede contener letras y espacios."
+    
+    # Verificar que no esté vacío
+    if nombre.strip() == "":
+        return False, "El nombre no puede estar vacío."
+    
+    return True, nombre
+
+
+def validar_apellido(apellido):
+    """
+    Verifica que el apellido solo contenga letras y espacios.
+
+    Args:
+        apellido (str): Apellido a validar.
+
+    Returns:
+        tuple: (True, apellido) si es válido.
+               (False, mensaje_error) si no es válido.
+    """
+    # Recorremos cada caracter y verificamos que sea letra o espacio
+    for caracter in apellido:
+        if not (caracter.isalpha() or caracter == " "):
+            return False, "El apellido solo puede contener letras y espacios."
+    
+    # Verificar que no esté vacío
+    if apellido.strip() == "":
+        return False, "El apellido no puede estar vacío."
+    
+    return True, apellido

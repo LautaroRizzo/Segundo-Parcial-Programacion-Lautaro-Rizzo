@@ -1,0 +1,37 @@
+[
+    {
+        "dni": 47877142,
+        "nombre": "Lautaro",
+        "apellido": "Rizzo",
+        "edad": 19,
+        "nota": 9.0
+    },
+    {
+        "dni": 123456789,
+        "nombre": "Jose",
+        "apellido": "Gimenez",
+        "edad": 12,
+        "nota": 5.0
+    },
+    {
+        "dni": 87654321,
+        "nombre": "Lucas ",
+        "apellido": "Giachero",
+        "edad": 15,
+        "nota": 8.0
+    },
+    {
+        "dni": 49529242,
+        "nombre": "Samira",
+        "apellido": "Rizzo",
+        "edad": 16,
+        "nota": 6.0
+    },
+    {
+        "dni": 27282960,
+        "nombre": "Analia",
+        "apellido": "Cantaluppi",
+        "edad": 18,
+        "nota": 10.0
+    }
+]

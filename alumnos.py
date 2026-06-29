@@ -1,5 +1,9 @@
+# alumnos.py
+# Responsabilidad: Todas las operaciones con alumnos (CRUD).
+
 from archivos import cargar_datos, guardar_datos
-from validaciones import validar_dni, validar_edad, validar_nota
+from validaciones import validar_dni, validar_edad, validar_nota, validar_nombre, validar_apellido
+
 
 def registrar_alumno(dni, nombre, apellido, edad, nota):
     """
@@ -18,16 +22,31 @@ def registrar_alumno(dni, nombre, apellido, edad, nota):
     """
     lista = cargar_datos()
     
+    # Validar DNI
     valido, resultado = validar_dni(dni, lista)
     if not valido:
         return False, resultado
     dni = resultado
     
+    # Validar nombre
+    valido, resultado = validar_nombre(nombre)
+    if not valido:
+        return False, resultado
+    nombre = resultado
+    
+    # Validar apellido
+    valido, resultado = validar_apellido(apellido)
+    if not valido:
+        return False, resultado
+    apellido = resultado
+    
+    # Validar edad
     valido, resultado = validar_edad(edad)
     if not valido:
         return False, resultado
     edad = resultado
     
+    # Validar nota
     valido, resultado = validar_nota(nota)
     if not valido:
         return False, resultado
@@ -45,6 +64,7 @@ def registrar_alumno(dni, nombre, apellido, edad, nota):
     guardar_datos(lista)
     return True, "Alumno registrado con exito."
 
+
 def listar_alumnos():
     """
     Devuelve la lista completa de alumnos.
@@ -53,6 +73,7 @@ def listar_alumnos():
         list: Lista de diccionarios con todos los alumnos.
     """
     return cargar_datos()
+
 
 def buscar_alumno(dni):
     """
@@ -74,6 +95,7 @@ def buscar_alumno(dni):
         return None
     except ValueError:
         return None
+
 
 def modificar_alumno(dni, nuevo_nombre, nuevo_apellido, nueva_edad, nueva_nota):
     """
@@ -105,11 +127,25 @@ def modificar_alumno(dni, nuevo_nombre, nuevo_apellido, nueva_edad, nueva_nota):
     if alumno_encontrado is None:
         return False, "No se encontro un alumno con ese DNI."
     
+    # Validar nombre
+    valido, resultado = validar_nombre(nuevo_nombre)
+    if not valido:
+        return False, resultado
+    nuevo_nombre = resultado
+    
+    # Validar apellido
+    valido, resultado = validar_apellido(nuevo_apellido)
+    if not valido:
+        return False, resultado
+    nuevo_apellido = resultado
+    
+    # Validar edad
     valido, resultado = validar_edad(nueva_edad)
     if not valido:
         return False, resultado
     edad = resultado
     
+    # Validar nota
     valido, resultado = validar_nota(nueva_nota)
     if not valido:
         return False, resultado
@@ -122,6 +158,7 @@ def modificar_alumno(dni, nuevo_nombre, nuevo_apellido, nueva_edad, nueva_nota):
     
     guardar_datos(lista)
     return True, "Alumno modificado con exito."
+
 
 def eliminar_alumno(dni):
     """
