@@ -23,7 +23,7 @@ def registrar_con_reintentos():
     Returns:
         None: No devuelve nada.
     """
-    print("\n--- REGISTRAR ALUMNO ---")
+    print("--- REGISTRAR ALUMNO ---")
     
     while True:
         dni, nombre, apellido, edad, nota = pedir_datos()
@@ -51,9 +51,8 @@ def modificar_con_reintentos():
     Returns:
         None: No devuelve nada.
     """
-    print("\n--- MODIFICAR ALUMNO ---")
+    print("--- MODIFICAR ALUMNO ---")
     
-    # Buscar el alumno
     while True:
         dni = pedir_dni()
         alumno = buscar_alumno(dni)
@@ -67,7 +66,7 @@ def modificar_con_reintentos():
                 print("Modificacion cancelada.")
                 return
     
-    # Modificar los datos
+
     while True:
         print("  (Deje en blanco para mantener el valor actual)")
         nuevo_nombre = input(f"  Nombre ({alumno['nombre']}): ") or alumno['nombre']
@@ -98,7 +97,7 @@ def eliminar_con_reintentos():
     Returns:
         None: No devuelve nada.
     """
-    print("\n--- ELIMINAR ALUMNO ---")
+    print("--- ELIMINAR ALUMNO ---")
     
     while True:
         dni = pedir_dni()
@@ -140,7 +139,7 @@ def main():
             registrar_con_reintentos()
         
         elif opcion == "2":
-            print("\n--- LISTAR ALUMNOS ---")
+            print("--- LISTAR ALUMNOS ---")
             alumnos = listar_alumnos()
             if not alumnos:
                 print("  No hay alumnos registrados.")
@@ -151,7 +150,7 @@ def main():
                 print("-" * 35)
         
         elif opcion == "3":
-            print("\n--- BUSCAR ALUMNO ---")
+            print("--- BUSCAR ALUMNOS ---")
             dni = pedir_dni()
             alumno = buscar_alumno(dni)
             if alumno:
@@ -166,7 +165,7 @@ def main():
             eliminar_con_reintentos()
         
         elif opcion == "6":
-            print("\n--- ESTADISTICAS ---")
+            print("--- ESTADISTICAS ---")
             stats = calcular_estadisticas()
             print(f"  Total de alumnos: {stats['total']}")
             if stats['total'] > 0:
@@ -177,12 +176,9 @@ def main():
                 print(f"  Desaprobados (< 6): {stats['desaprobados']}")
         
         elif opcion == "7":
-            print("\n¡Hasta luego! Saliendo del sistema...")
+            print("¡Hasta luego! Saliendo del sistema...")
             break
         
         else:
             print("Opcion no valida. Elija 1-7.")
-
-
-# ============ PUNTO DE ENTRADA ============
 main()
