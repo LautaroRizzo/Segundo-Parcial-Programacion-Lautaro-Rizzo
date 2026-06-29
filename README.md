@@ -24,9 +24,9 @@ alumnos.json # Archivo de datos (se crea automáticamente)
 
 ## 📦 Instalación y Ejecución
 
-1. Guardar el archivo `main.py`
+1. Guardar la carpeta `Segundo-Parcial-Programacion-Lautaro-Rizzo`
 2. Ejecutar el programa:
-python gestion_alumnos.py
+main.py
 📋 Uso
 <img width="352" height="256" alt="image" src="https://github.com/user-attachments/assets/a6c02991-51eb-4121-b342-7950114b4b6a" />
 
