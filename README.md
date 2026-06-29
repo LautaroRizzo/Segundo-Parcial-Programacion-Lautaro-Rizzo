@@ -27,6 +27,7 @@ alumnos.json # Archivo de datos (se crea automáticamente)
 1. Guardar la carpeta `Segundo-Parcial-Programacion-Lautaro-Rizzo`
 2. Ejecutar el programa:
 main.py
+
 📋 Uso
 <img width="352" height="256" alt="image" src="https://github.com/user-attachments/assets/a6c02991-51eb-4121-b342-7950114b4b6a" />
 
