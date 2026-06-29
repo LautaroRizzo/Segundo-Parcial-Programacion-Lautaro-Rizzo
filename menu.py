@@ -1,7 +1,13 @@
-#funciones del menu para que el main me quede lo mas limpio posible
+# menu.py
+# Responsabilidad: Funciones auxiliares del menú
+
 def mostrar_menu():
-    """Muestra el menú de opciones."""
-    print("GESTION DE ALUMNOS")
+    """
+    Muestra el menú de opciones en pantalla.
+    """
+    print("\n" + "=" * 42)
+    print("        GESTION DE ALUMNOS")
+    print("=" * 42)
     print("  1. Registrar alumno")
     print("  2. Listar alumnos")
     print("  3. Buscar alumno")
@@ -9,12 +15,24 @@ def mostrar_menu():
     print("  5. Eliminar alumno")
     print("  6. Ver estadisticas")
     print("  7. Salir")
+    print("=" * 42)
+
 def pedir_dni():
-    """Solicita un DNI al usuario."""
+    """
+    Solicita un DNI al usuario.
+
+    Returns:
+        str: DNI ingresado por el usuario.
+    """
     return input("  Ingrese DNI: ")
 
 def pedir_datos():
-    """Solicita los datos de un alumno al usuario."""
+    """
+    Solicita los datos de un alumno al usuario.
+
+    Returns:
+        tuple: (dni, nombre, apellido, edad, nota)
+    """
     dni = input("  DNI: ")
     nombre = input("  Nombre: ")
     apellido = input("  Apellido: ")
@@ -23,7 +41,13 @@ def pedir_datos():
     return dni, nombre, apellido, edad, nota
 
 def mostrar_alumno(alumno):
-    """Muestra los datos de un alumno."""
+    """
+    Muestra los datos de un alumno en formato legible.
+
+    Args:
+        alumno (dict): Diccionario con los datos del alumno.
+                       Si es None, muestra "Alumno no encontrado."
+    """
     if alumno is None:
         print("Alumno no encontrado.")
         return

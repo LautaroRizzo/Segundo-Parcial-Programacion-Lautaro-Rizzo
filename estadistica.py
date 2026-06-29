@@ -1,7 +1,20 @@
+# estadisticas.py
+# Responsabilidad: Calcular estadísticas de los alumnos.
+
 from archivos import cargar_datos
 
-
 def calcular_estadisticas():
+    """
+    Calcula y devuelve todas las estadísticas de los alumnos.
+
+    Returns:
+        dict: Diccionario con las siguientes claves:
+            - total (int): Cantidad total de alumnos.
+            - promedio (float): Promedio de notas.
+            - mayor_nota (dict): Datos del alumno con mayor nota.
+            - aprobados (int): Cantidad de aprobados (nota >= 6).
+            - desaprobados (int): Cantidad de desaprobados (nota < 6).
+    """
     lista = cargar_datos()
     total = len(lista)
     
