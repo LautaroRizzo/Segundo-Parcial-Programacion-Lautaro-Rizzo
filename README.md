@@ -3,7 +3,7 @@
 Sistema de gestión de alumnos desarrollado en Python como parte del examen parcial de Programación I.
 
 ## 📁 Estructura del Proyecto
-gestion_alumnos.py # Programa completo (único archivo)
+main.py # Programa completo (único archivo)
 alumnos.json # Archivo de datos (se crea automáticamente)
 
 ## 🚀 Características
