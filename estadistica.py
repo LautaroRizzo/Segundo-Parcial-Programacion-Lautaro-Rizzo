@@ -1,6 +1,3 @@
-# estadisticas.py
-# Responsabilidad: Calcular estadísticas de los alumnos.
-
 from archivos import cargar_datos
 
 def calcular_estadisticas():

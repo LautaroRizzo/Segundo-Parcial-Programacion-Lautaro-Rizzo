@@ -1,6 +1,3 @@
-# menu.py
-# Responsabilidad: Funciones auxiliares del menú
-
 def mostrar_menu():
     """
     Muestra el menú de opciones en pantalla.
