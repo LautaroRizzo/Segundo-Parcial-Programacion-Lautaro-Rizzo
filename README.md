@@ -33,7 +33,10 @@ python gestion_alumnos.py
 
 
 
-🔍 Validaciones
+🔍 Validaciones: 
+
+No se Admitirán Registros con
+
 DNI duplicado
 
 DNI negativo o con letras
