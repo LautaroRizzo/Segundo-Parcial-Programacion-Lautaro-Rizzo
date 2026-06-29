@@ -17,3 +17,4 @@ def guardar_datos(lista_alumnos: list) -> None:
     """Guarda la lista de alumnos en el archivo JSON."""
     with open(ARCHIVO, 'w', encoding='utf-8') as archivo:
         json.dump(lista_alumnos, archivo, indent=4, ensure_ascii=False)
+

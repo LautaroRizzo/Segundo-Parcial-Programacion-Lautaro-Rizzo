@@ -1,5 +1,6 @@
 from archivos import cargar_datos
 
+
 def calcular_estadisticas():
     lista = cargar_datos()
     total = len(lista)

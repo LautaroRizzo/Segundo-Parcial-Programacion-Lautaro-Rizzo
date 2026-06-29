@@ -91,3 +91,4 @@ def eliminar_alumno(dni):
         return False, "No se encontro un alumno con ese DNI."
     except ValueError:
         return False, "El DNI debe ser un numero."
+    

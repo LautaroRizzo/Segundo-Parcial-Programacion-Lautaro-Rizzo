@@ -14,6 +14,7 @@ def validar_dni(dni: str, lista_alumnos: list, dni_original: int = None):
     
     return True, dni
 
+
 def validar_edad(edad: str):
     """Verifica que la edad sea un número entero no negativo."""
     try:
