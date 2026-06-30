@@ -1,6 +1,3 @@
-# alumnos.py
-# Responsabilidad: Todas las operaciones con alumnos (CRUD).
-
 from archivos import cargar_datos, guardar_datos
 from validaciones import validar_dni, validar_edad, validar_nota, validar_nombre, validar_apellido
 
