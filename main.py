@@ -1,6 +1,3 @@
-# main.py
-# Punto de entrada del programa. Solo contiene el menú principal.
-
 from alumnos import (
     registrar_alumno,
     listar_alumnos,
