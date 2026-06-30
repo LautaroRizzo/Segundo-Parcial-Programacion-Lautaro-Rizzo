@@ -19,31 +19,31 @@ def registrar_alumno(dni, nombre, apellido, edad, nota):
     """
     lista = cargar_datos()
     
-    # Validar DNI
+    #validar DNI
     valido, resultado = validar_dni(dni, lista)
     if not valido:
         return False, resultado
     dni = resultado
     
-    # Validar nombre
+    #validar nombre
     valido, resultado = validar_nombre(nombre)
     if not valido:
         return False, resultado
     nombre = resultado
     
-    # Validar apellido
+    #validar apellido
     valido, resultado = validar_apellido(apellido)
     if not valido:
         return False, resultado
     apellido = resultado
     
-    # Validar edad
+    #validar edad
     valido, resultado = validar_edad(edad)
     if not valido:
         return False, resultado
     edad = resultado
     
-    # Validar nota
+    #validar nota
     valido, resultado = validar_nota(nota)
     if not valido:
         return False, resultado

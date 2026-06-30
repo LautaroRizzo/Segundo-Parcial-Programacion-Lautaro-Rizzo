@@ -1,6 +1,3 @@
-# validaciones.py
-# Responsabilidad: Contiene todas las funciones de validación.
-
 def validar_dni(dni, lista_alumnos, dni_original=None):
     """
     Verifica que el DNI sea válido y no esté duplicado.
